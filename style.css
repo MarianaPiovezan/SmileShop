@@ -1,0 +1,213 @@
+/************* RESET***********/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/************* VARIABLES ***********/
+
+:root {
+  /*Colors*/
+
+  --color-text: #ffffff;
+  --color-text-alt: #f4acb0;
+  --base-color: #31dae7;
+  --body-color: #391e4f;
+
+  /*Fonts*/
+  --font-size: 1rem;
+  --font-family: "Montserrat", "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+/************Header*************/
+
+header {
+  background-image: url(./assets/BG.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-direction: row;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-top: 2.25rem;
+}
+
+.logo img {
+  width: 150px;
+  text-align: center;
+}
+
+h1.title {
+  color: var(--color-text-alt);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--color-text);
+  font-weight: bold;
+}
+
+p.subtitle {
+  font-weight: 300;
+}
+
+.img-e-commerce img {
+  display: grid;
+  width: 80%;
+  max-width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/********FORMULARIO********/
+
+.container-form {
+  background-color: var(--body-color);
+}
+.container-items {
+  width: 600px;
+}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+form div + div {
+  margin-top: 1.2rem;
+}
+
+label {
+  display: block;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+input,
+input::placeholder {
+  font-family: var(--font-family);
+}
+
+input {
+  color: var(--color-text);
+  background-color: var(--body-color);
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  padding: 0.8rem;
+}
+
+input::placeholder {
+  color: #c5b6b3;
+}
+
+input:focus {
+  outline-color: var(--base-color);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-checkbox label {
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+  cursor: pointer;
+  text-align: left;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--body-color);
+  border: 2px solid #fff;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--base-color);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox:checked:before {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button {
+  background-color: var(--base-color);
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  color: var(--body-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  h1.title {
+    font-size: 2.25rem;
+  }
+
+  input {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .container {
+    gap: 0.75rem;
+  }
+
+  .img-e-commerce img {
+    width: 350px;
+  }
+}
