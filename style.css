@@ -43,6 +43,7 @@ header {
 
 .container {
   display: grid;
+  position: relative;
   align-items: flex-end;
   justify-content: center;
   gap: 1rem;
@@ -76,14 +77,18 @@ p.subtitle {
   font-weight: 300;
 }
 
-.img-e-commerce {
-  display: inline-block;
-  bottom: 0;
+.img-e-comerce {
+  position: relative;
+  grid-row: 3 / 4;
 }
+
 .img-e-commerce img {
   width: 80%;
-  max-width: 350px;
+  position: absolute;
   bottom: 0;
+  max-width: 350px;
+  left: 50%;
+  transform: tranlate(-50%, 0);
 }
 
 /********FORMULARIO********/
