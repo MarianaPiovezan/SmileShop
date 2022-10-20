@@ -43,14 +43,14 @@ header {
 
 .container {
   display: grid;
-  grid-direction: row;
-  grid-template-rows: 1fr auto;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 1rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   padding-top: 2.25rem;
+  height: 100vh;
+  grid-template-rows: auto auto 1fr;
 }
 
 .logo img {
@@ -68,21 +68,21 @@ p {
   font-size: 1rem;
   margin-bottom: 0.2rem;
   color: var(--color-text);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 p.subtitle {
   font-weight: 300;
 }
 
-.img-e-commerce img {
-  display: grid;
-  width: 80%;
-  max-width: 400px;
-  position: absolute;
+.img-e-commerce {
+  display: inline-block;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+}
+.img-e-commerce img {
+  width: 80%;
+  max-width: 350px;
+  bottom: 0;
 }
 
 /********FORMULARIO********/
@@ -97,7 +97,7 @@ p.subtitle {
 form {
   margin: 0 auto;
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
@@ -117,7 +117,9 @@ input::placeholder {
   font-family: var(--font-family);
 }
 
-
+input::placeholder {
+  color: #c5b6b3;
+}
 
 input {
   color: var(--color-text);
@@ -127,14 +129,7 @@ input {
   border-radius: 20px;
   border: 2px solid #ffffff;
   padding: 0.8rem;
-}
-
-input::placeholder {
-  color: #c5b6b3;
-}
-
-input:focus {
-  outline-color: var(--base-color);
+  outline: 0;
 }
 
 .form-checkbox {
@@ -165,6 +160,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
 .checkbox:before {
@@ -207,9 +203,5 @@ input:focus {
 @media (min-width: 1020px) {
   .container {
     gap: 0.75rem;
-  }
-
-  .img-e-commerce img {
-    width: 350px;
   }
 }
