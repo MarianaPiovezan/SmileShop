@@ -32,7 +32,7 @@ body {
 
 /************Header*************/
 
-header {
+.principal {
   background-image: url(./assets/BG.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -49,14 +49,15 @@ header {
   gap: 1rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  padding-top: 2.25rem;
-  height: 100vh;
-  grid-template-rows: auto auto 1fr;
+  height: 100%;
+  grid-template-rows: auto auto auto-height;
+  overflow: hidden;
 }
 
 .logo img {
   width: 150px;
   text-align: center;
+  padding-top: 2.25rem;
 }
 
 h1.title {
@@ -73,22 +74,14 @@ p {
   font-weight: 600;
 }
 
-p.subtitle {
+p.subtitle-alt {
   font-weight: 300;
 }
 
-.img-e-comerce {
-  position: relative;
-  grid-row: 3 / 4;
-}
+
 
 .img-e-commerce img {
-  width: 80%;
-  position: absolute;
-  bottom: 0;
-  max-width: 350px;
-  left: 50%;
-  transform: tranlate(-50%, 0);
+  width: 70%;
 }
 
 /********FORMULARIO********/
@@ -192,7 +185,7 @@ input {
   border: none;
   border-radius: 20px;
   color: var(--body-color);
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -201,13 +194,25 @@ input {
     font-size: 2.25rem;
   }
 
+  p{
+    margin-bottom: 0.8rem;
+  }
+
   input {
     width: 300px;
   }
+
+  .container {
+    gap: 6rem;
+  }
+ 
 }
 
 @media (min-width: 1020px) {
   .container {
     gap: 0.75rem;
   }
+
+  .img-e-commerce img {
+  width: 250px;
 }
