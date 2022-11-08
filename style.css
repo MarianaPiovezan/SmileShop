@@ -133,6 +133,10 @@ input {
   outline: 0;
 }
 
+input:focus{
+ boder-bottom: 2px solid var(--color-text-alt);
+}
+
 .form-checkbox {
   display: flex;
   align-items: center;
