@@ -119,7 +119,8 @@ input::placeholder {
 }
 
 input::placeholder {
-  color: #c5b6b3;
+  color: var(--color-text);
+  opacity: 0.6;
 }
 
 input {
