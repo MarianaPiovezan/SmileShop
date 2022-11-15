@@ -135,7 +135,7 @@ input {
 }
 
 input:focus{
- boder-bottom: 2px solid var(--color-text-alt);
+  border: 2px solid var(--base-color);
 }
 
 .form-checkbox {
