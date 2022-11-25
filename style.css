@@ -198,8 +198,10 @@ input:focus{
 }
 
 .button:hover{
-background-color: var(--base-color);
-opacity: 0.6;
+ background-color: var(--base-color);
+ opacity: 0.6;
+ box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+ 
 }
 
 @media (min-width: 768px) {
