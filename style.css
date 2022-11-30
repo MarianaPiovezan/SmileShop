@@ -193,7 +193,7 @@ input:focus{
   border: none;
   border-radius: 20px;
   color: var(--body-color);
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
 }
 
